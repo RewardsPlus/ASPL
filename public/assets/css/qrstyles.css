@@ -1,0 +1,1002 @@
+.float-left{
+    float: left;
+}
+.creater-part-scroll{
+    height: calc(100vh - 100px);
+    top: 50px;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+.creater-part-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+.creater-part-scroll::-webkit-scrollbar-thumb{
+    background: #AAA;
+    border-radius: 5px;
+}
+.creater-part-scroll::-webkit-scrollbar-track{
+    background: #EDEDED;
+    border-radius: 5px;
+}
+.step-creation-box{
+    border: 1px solid #DDD;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.title-step-box{
+    border-radius: 20px;
+    font-size: 14px;
+    color: #FFF;
+    background: #000;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+.circle-logo-box{
+    padding: 0px 10px;
+}
+.opactiy-0{
+    opacity: 0;
+}
+.upload-logo-btn{
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+.circled-logo{
+    display: block;
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    margin: 0px auto;
+}
+.upload-btn, .clear-btn{
+    border-radius: 5px;
+    background: #009CDE;
+    color: #FFF;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 6px 25px;
+    margin-bottom: 10px;
+}
+.clear-btn{
+    background: #000;
+}
+.full-logo{
+    height: 60px;
+    width: 200px;
+    object-fit: contain;
+}
+.brand-tilte-input{
+    height: 45px;
+    border: 1px solid #AAA;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #000;
+    padding: 10px;
+}
+.radio-color-text{
+    margin: 0px 5px;
+    font-size: 14px;
+    display: inline-block;
+}
+.social-block{
+    gap: 10px;
+}
+.add-multi-brands-btn{
+    float: right;
+    cursor: pointer;
+    height: 40px;
+    padding: 0 30px;
+    background: #000387;
+    color: #FFF;
+    font-size: 15px;
+    border-radius: 30px;
+}
+.qr-close-circle{
+    padding: 10px;
+    right: 0px;
+    top: -10px;
+}
+.social-buttons-wrapper{
+    gap: 5px;
+}
+.social-buttons-wrapper .btn-item{
+    font-size: 20px;
+    background: #DDD;
+    color: #000;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.icon-social-search-box .qr-search{
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    top: 50%;
+    left: 10px;
+}
+.icon-social-search{
+    height: 40px;
+    border: 1px solid #AAA;
+    border-radius: 25px;
+    font-size: 20px;
+    color: #000;
+    padding: 10px 10px 10px 50px;
+}
+.all-social-inputs{
+    gap: 15px;
+}
+
+/* PHONE SCREEN BOX */
+.phone-screen-box{
+    background: #EFF1F6;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+.phone-screen-box::-webkit-scrollbar{
+    display: none;
+}
+.brand-banner-container{
+    background: #2A356C;
+    padding: 43px 35px 80px;
+}
+.header-logo-row{
+    gap: 10px;
+}
+.logo-circle-box{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+.logo-circle-box img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.logo-rectangle-box{
+    height: 60px;
+    width: 190px;
+}
+.logo-rectangle-box img{
+    object-fit: contain;
+    height: 60px;
+    width: 190px;
+}
+.brand-shop-title{
+    font-size: 24px;
+    color: #FFF;
+}
+.brand-sub-title{
+    font-size: 14px;
+    color: #FFF;
+    font-weight: 400;
+}
+.brand-shop-container{
+    margin-top: -50px;
+    z-index: 5;
+    padding: 0 20px;
+    gap: 15px;
+}
+.brand-shop-links{
+    background: #FFF;
+    border-radius: 6px;
+    min-height: 80px;
+    padding: 6px 30px 6px 20px;
+    gap: 10px;
+}
+.added-brand-icon img{
+    height: 65px;
+    width: 100px;
+    object-fit: contain;
+}
+.added-brand-text{
+    font-size: 15px;
+    color: #000;
+    font-weight: 400;
+}
+.goLink-arrow{
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    top: 50%;
+    right: 15px;
+}
+.social-shop-container{
+    padding: 0 20px;
+}
+.added-social-shop-icons{
+    background: #FFF;
+    border-radius: 6px;
+    padding: 20px 38px;
+}
+.shop-social-title{
+    font-size: 15px;
+    color: #000;
+    font-weight: 600;
+}
+.shop-social-desc{
+    font-size: 12px;
+    color: #000;
+    font-weight: 400;
+}
+.added-social-icons-Box{
+    gap: 14px;
+}
+.added-social-box{
+    background: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    font-size: 40px;
+    height: 70px;
+    width: calc(33% - 10px);
+}
+.download-brochure-btn{
+    background: #2C67FF;
+    border-radius: 8px;
+    height: 50px;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 600;
+    border: none;
+    box-shadow: none;
+}
+
+
+
+@font-face {
+    font-family: QrRewards;
+    src: url(QrRewards.eot);
+    src: url(QrRewards.eot) format("embedded-opentype"),url(QrRewards.ttf) format("truetype"),url(QrRewards.woff) format("woff"),url(QrRewards.svg) format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block
+}
+
+[class*=" qr-"],[class^=qr-] {
+    font-family: QrRewards;
+    speak: never;
+    font-style: normal;
+    font-weight: 400;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.qr-stoplight_logo:before {
+    content: "\e900"
+}
+
+.qr-email:before {
+    content: "\e901"
+}
+
+.qr-instagram:before {
+    content: "\e902"
+}
+
+.qr-pdf:before {
+    content: "\e903"
+}
+
+.qr-html:before {
+    content: "\e904"
+}
+
+.qr-facebook-thin:before {
+    content: "\e905"
+}
+
+.qr-location:before {
+    content: "\e906"
+}
+
+.qr-app-store:before {
+    content: "\e907"
+}
+
+.qr-facebook-like:before {
+    content: "\e908"
+}
+
+.qr-pinterest:before {
+    content: "\e909"
+}
+
+.qr-mp3:before {
+    content: "\e90a"
+}
+
+.qr-vcard:before {
+    content: "\e90b"
+}
+
+.qr-url:before {
+    content: "\e90c"
+}
+
+.qr-text:before {
+    content: "\e90d"
+}
+
+.qr-event:before {
+    content: "\e90e"
+}
+
+.qr-youtube:before {
+    content: "\e90f"
+}
+
+.qr-star-inside-circle:before {
+    content: "\e910"
+}
+
+.qr-open-menu:before {
+    content: "\e911"
+}
+
+.qr-twitter:before {
+    content: "\e912"
+}
+
+.qr-caret-up:before {
+    content: "\e913"
+}
+
+.qr-caret-down:before {
+    content: "\e914"
+}
+
+.qr-sns:before {
+    content: "\e915"
+}
+
+.qr-wechat:before {
+    content: "\e916"
+}
+
+.qr-multi:before {
+    content: "\e917"
+}
+
+.qr-search:before {
+    content: "\e918"
+}
+
+.qr-alipay:before {
+    content: "\e919"
+}
+
+.qr-social-media:before {
+    content: "\e91a"
+}
+
+.qr-forms:before {
+    content: "\e91b"
+}
+
+.qr-check-circle:before {
+    content: "\e91c"
+}
+
+.qr-more:before {
+    content: "\e91d"
+}
+
+.qr-line:before {
+    content: "\e91e"
+}
+
+.qr-tiktok:before {
+    content: "\e91f"
+}
+
+.qr-close:before {
+    content: "\e920"
+}
+
+.qr-question-circle:before {
+    content: "\e921"
+}
+
+.qr-angle-down:before {
+    content: "\e922"
+}
+
+.qr-angle-up:before {
+    content: "\e923"
+}
+
+.qr-plus:before {
+    content: "\e924"
+}
+
+.qr-user:before {
+    content: "\e925"
+}
+
+.qr-qrcode:before {
+    content: "\e926"
+}
+
+.qr-double-arrow-left:before {
+    content: "\e927"
+}
+
+.qr-double-arrow-right:before {
+    content: "\e928"
+}
+
+.qr-question:before {
+    content: "\e929"
+}
+
+.qr-paint-brush:before {
+    content: "\e92a"
+}
+
+.qr-trash:before {
+    content: "\e92b"
+}
+
+.qr-linkedin:before {
+    content: "\e92c"
+}
+
+.qr-wechat-main:before {
+    content: "\e92d"
+}
+
+.qr-whatsapp:before {
+    content: "\e92e"
+}
+
+.qr-tumblr:before {
+    content: "\e92f"
+}
+
+.qr-skype:before {
+    content: "\e930"
+}
+
+.qr-reddit:before {
+    content: "\e931"
+}
+
+.qr-qq:before {
+    content: "\e932"
+}
+
+.qr-medium:before {
+    content: "\e933"
+}
+
+.qr-yelp:before {
+    content: "\e934"
+}
+
+.qr-quora:before {
+    content: "\e935"
+}
+
+.qr-meetup:before {
+    content: "\e936"
+}
+
+.qr-snapchat:before {
+    content: "\e937"
+}
+
+.qr-check:before {
+    content: "\e938"
+}
+
+.qr-exchange:before {
+    content: "\e939"
+}
+
+.qr-facebook:before {
+    content: "\e93a"
+}
+
+.qr-play:before {
+    content: "\e93b"
+}
+
+.qr-kakao-talk:before {
+    content: "\e93c"
+}
+
+.qr-viber:before {
+    content: "\e93d"
+}
+
+.qr-high-signal:before {
+    content: "\e93e"
+}
+
+.qr-telegram:before {
+    content: "\e93f"
+}
+
+.qr-twitch:before {
+    content: "\e940"
+}
+
+.qr-phone-call:before {
+    content: "\e941"
+}
+
+.qr-email1:before {
+    content: "\e942"
+}
+
+.qr-postmates:before {
+    content: "\e943"
+}
+
+.qr-foodpanda:before {
+    content: "\e944"
+}
+
+.qr-ebay:before {
+    content: "\e945"
+}
+
+.qr-rakuten:before {
+    content: "\e946"
+}
+
+.qr-menulog:before {
+    content: "\e947"
+}
+
+.qr-podcast:before {
+    content: "\e948"
+}
+
+.qr-zomato:before {
+    content: "\e949"
+}
+
+.qr-shopify:before {
+    content: "\e94a"
+}
+
+.qr-ubereats:before {
+    content: "\e94b"
+}
+
+.qr-etsy:before {
+    content: "\e94c"
+}
+
+.qr-bilibili:before {
+    content: "\e94d"
+}
+
+.qr-streamlabs:before {
+    content: "\e94e"
+}
+
+.qr-soundcloud:before {
+    content: "\e94f"
+}
+
+.qr-patreon:before {
+    content: "\e950"
+}
+
+.qr-grubhub:before {
+    content: "\e951"
+}
+
+.qr-doordash:before {
+    content: "\e952"
+}
+
+.qr-kuaishou:before {
+    content: "\e953"
+}
+
+.qr-douban:before {
+    content: "\e954"
+}
+
+.qr-account:before {
+    content: "\e955"
+}
+
+.qr-settings:before {
+    content: "\e956"
+}
+
+.qr-refresh:before {
+    content: "\e957"
+}
+
+.qr-swiggy:before {
+    content: "\e958"
+}
+
+.qr-justeat:before {
+    content: "\e959"
+}
+
+.qr-deliveroo:before {
+    content: "\e95a"
+}
+
+.qr-glovo:before {
+    content: "\e95b"
+}
+
+.qr-time:before {
+    content: "\e95c"
+}
+
+.qr-notification:before {
+    content: "\e95d"
+}
+
+.qr-lock:before {
+    content: "\e95e"
+}
+
+.qr-zhihu:before {
+    content: "\e95f"
+}
+
+.qr-xiao-hongsu:before {
+    content: "\e960"
+}
+
+.qr-weibo:before {
+    content: "\e961"
+}
+
+.qr-wechat-mini:before {
+    content: "\e962"
+}
+
+.qr-soul:before {
+    content: "\e963"
+}
+
+.qr-himalaya:before {
+    content: "\e964"
+}
+
+.qr-meituan:before {
+    content: "\e965"
+}
+
+.qr-eleme:before {
+    content: "\e966"
+}
+
+.qr-pingduoduo:before {
+    content: "\e967"
+}
+
+.qr-jingdong:before {
+    content: "\e968"
+}
+
+.qr-taobao:before {
+    content: "\e969"
+}
+
+.qr-xuexi:before {
+    content: "\e96a"
+}
+
+.qr-qq-music:before {
+    content: "\e96b"
+}
+
+.qr-k-song:before {
+    content: "\e96c"
+}
+
+.qr-hibixin:before {
+    content: "\e96d"
+}
+
+.qr-dianping:before {
+    content: "\e96e"
+}
+
+.qr-wechat-channel:before {
+    content: "\e96f"
+}
+
+.qr-amazon:before {
+    content: "\e970"
+}
+
+.qr-applemusic:before {
+    content: "\e971"
+}
+
+.qr-yogiyo:before {
+    content: "\e972"
+}
+
+.qr-send:before {
+    content: "\e973"
+}
+
+.qr-open-box:before {
+    content: "\e974"
+}
+
+.qr-left-arrow:before {
+    content: "\e975"
+}
+
+.qr-xianyu:before {
+    content: "\e976"
+}
+
+.qr-tick-inside-circle:before {
+    content: "\e977"
+}
+
+.qr-reward:before {
+    content: "\e978"
+}
+
+.qr-template:before {
+    content: "\e979"
+}
+
+.qr-global:before {
+    content: "\e97a"
+}
+
+.qr-fax:before {
+    content: "\e97b"
+}
+
+.qr-brief-case:before {
+    content: "\e97c"
+}
+
+.qr-phone:before {
+    content: "\e97d"
+}
+
+.qr-form:before {
+    content: "\e97e"
+}
+
+.qr-add-user:before {
+    content: "\e97f"
+}
+
+.qr-documentation:before {
+    content: "\e980"
+}
+
+.qr-kesong:before {
+    content: "\e981"
+}
+
+.qr-cloud-computing:before {
+    content: "\e982"
+}
+
+.qr-rise:before {
+    content: "\e983"
+}
+
+.qr-box:before {
+    content: "\e984"
+}
+
+.qr-bolt:before {
+    content: "\e985"
+}
+
+.qr-shield:before {
+    content: "\e986"
+}
+
+.qr-circle-check-thin:before {
+    content: "\e987"
+}
+
+.qr-share:before {
+    content: "\e988"
+}
+
+.qr-link:before {
+    content: "\e989"
+}
+
+.qr-hot-coffee:before {
+    content: "\e98a"
+}
+
+.qr-speech-bubble:before {
+    content: "\e98b"
+}
+
+.qr-shopping-bag:before {
+    content: "\e98c"
+}
+
+.qr-music:before {
+    content: "\e98d"
+}
+
+.qr-wifi:before {
+    content: "\e98e"
+}
+
+.qr-paper:before {
+    content: "\e98f"
+}
+
+.qr-user-profile:before {
+    content: "\e990"
+}
+
+.qr-facebook-circle:before {
+    content: "\e991"
+}
+
+.qr-frame:before {
+    content: "\e992"
+}
+
+.qr-layout:before {
+    content: "\e993"
+}
+
+.qr-sliders:before {
+    content: "\e994"
+}
+
+.qr-image:before {
+    content: "\e995"
+}
+
+.qr-two-arrows-pointing-right-and-left:before {
+    content: "\e996"
+}
+
+.qr-lock-no-key-hold:before {
+    content: "\e997"
+}
+
+.qr-arrow-down-in-circle:before {
+    content: "\e998"
+}
+
+.qr-scan:before {
+    content: "\e999"
+}
+
+.qr-star:before {
+    content: "\e99a"
+}
+
+.qr-embed-other:before {
+    content: "\e99b"
+}
+
+.qr-embed-video:before {
+    content: "\e99c"
+}
+
+.qr-meta-tags:before {
+    content: "\e99d"
+}
+
+.qr-store-hours:before {
+    content: "\e99e"
+}
+
+.qr-eyes:before {
+    content: "\e99f"
+}
+
+.qr-pattern:before {
+    content: "\e9a0"
+}
+
+.qr-template-frame:before {
+    content: "\e9a1"
+}
+
+.qr-angle-right:before {
+    content: "\e9a2"
+}
+
+.qr-angle-left:before {
+    content: "\e9a3"
+}
+
+.qr-uber:before {
+    content: "\e9a4"
+}
+
+.qr-exclamation-circle:before {
+    content: "\e9a5"
+}
+
+.qr-circle-check-regular:before {
+    content: "\e9a6"
+}
+
+.qr-plus-circle:before {
+    content: "\e9a7"
+}
+
+.qr-colors:before {
+    content: "\e9a8"
+}
+
+.qr-logo:before {
+    content: "\e9a9"
+}
+
+.qr-close-circle:before {
+    content: "\e9aa"
+}
+
+.qr-trashcan:before {
+    content: "\e9ab"
+}
+
+.qr-arrow:before {
+    content: "\e9ac"
+}
+
+.qr-location-solid:before {
+    content: "\e9ad"
+}
+
+.qr-lock-circle:before {
+    content: "\e9ae"
+}
+
+.qr-show-more:before {
+    content: "\e9af"
+}
+
+.qr-register:before {
+    content: "\e9b0"
+}
+
+.qr-login:before {
+    content: "\e9b1"
+}
+
+.qr-user-add:before {
+    content: "\e9b2"
+}
+
+.qr-dashboard:before {
+    content: "\e9b3"
+}
+
+.qr-logout:before {
+    content: "\e9b4"
+}
+
+.qr-sms:before {
+    content: "\e9b5"
+}
+
+.qr-event2:before {
+    content: "\e9b6"
+}
+
+.qr-padlock:before {
+    content: "\e9b7"
+}
