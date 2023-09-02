@@ -164,7 +164,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
-        Jenssegers\Mongodb\MongodbServiceProvider::class,   
+        // Jenssegers\Mongodb\MongodbServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -184,5 +184,5 @@ return [
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ])->toArray(),
-    
+
 ];

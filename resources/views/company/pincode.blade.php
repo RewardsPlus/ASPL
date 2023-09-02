@@ -50,11 +50,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                   
+
                 </tbody>
             </table>
         </div>
     </div>
+
+
 @endsection
 @section('content-area')
 @endsection
@@ -62,7 +64,7 @@
 
 @section('script-area')
 
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>  
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -89,11 +91,11 @@ if ($.fn.DataTable.isDataTable('.data-table')) {
 
 
     $(function () {
-        
+
       var table = $('.data-table').DataTable({
           processing: true,
           serverSide: true,
-          searching: true, 
+          searching: true,
           ajax: {
             url:"{{ route('company.delivery.pincode') }}",
             type:'get',
@@ -107,14 +109,14 @@ if ($.fn.DataTable.isDataTable('.data-table')) {
               {data:'delivery_time',name:'delivery_time'},
           ],
       });
-              
+
     });
     // Reinitialize Bootstrap dropdowns
     $(document).on('click', '.dropdown-toggle', function() {
         $(this).dropdown('toggle');
     });
 }
-    
+
   </script>
 
 @endsection

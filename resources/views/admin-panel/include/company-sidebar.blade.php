@@ -13,11 +13,10 @@
             <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title active" href="javascript::void(0)"><i data-feather="airplay"></i><span >Employee</span></a>
                 <ul class="sidebar-submenu" style="display:block">
                   <li><a href="{{ route(Helper::getGuard().'.employee.index') }}">All Employee</a></li>
-                  <li><a href="{{ route(Helper::getGuard().'.attendance.index') }}">Attendance</a></li>
-                  <li><a class="" href="{{ route(Helper::getGuard().'.employee.leave.application') }}">Leave Application</a></li> 
+                  <li><a class="" href="{{ route(Helper::getGuard().'.employee.leave.application') }}">Leave Application</a></li>
                 </ul>
               </li>
-              
+
               <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:void(0)"><i data-feather="lock"></i><span >Role & Permission</span></a>
                 <ul class="sidebar-submenu" style="display:block">
                   <li><a  href="{{route(Helper::getGuard().'.role-permission.role.index')}}" >Role </a></li>
@@ -30,6 +29,7 @@
               <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title active" href="javascript::void(0)"><i data-feather="airplay"></i><span >Delivery</span></a>
                 <ul class="sidebar-submenu" style="display:block">
                   <li><a href="{{ route(Helper::getGuard().'.delivery.pincode') }}">Locations</a></li>
+                  <li><a href="{{ route(Helper::getGuard().'.delivery.pincode-new') }}">Add New</a></li>
                 </ul>
               </li>
               {{-- QR Code --}}
@@ -37,7 +37,7 @@
                 <ul class="sidebar-submenu" style="display:block">
                   <li><a href="{{ route('qrcodes.create') }}">create</a></li>
                   <li><a href="{{ route('qrcodes.index') }}">List</a></li>
-                </ul> 
+                </ul>
               </li>
         </ul>
         </div>

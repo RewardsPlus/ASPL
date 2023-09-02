@@ -10,6 +10,13 @@ use Helper;
 class Pincode extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'pincode',
+        'store_id',
+        'max_days',
+        'min_days',
+        'pickup_time',
+    ];
 
     public function getStoreDeliveryAttribute($store_id){
        if($data=StoreHasPincode::where('store_id',$store_id)->where('pincode_id',$this->id)->first())

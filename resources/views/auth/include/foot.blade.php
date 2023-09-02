@@ -9,5 +9,5 @@
       <!-- Sidebar jquery-->
       <script src="../assets/js/config.js"></script>
       <!-- Template js-->
-      <script src="{{ asset('/assets/js/script.js') }}"></script>
+      <script src="{{ asset('assets/js/script.js') }}"></script>
       <!-- login js-->

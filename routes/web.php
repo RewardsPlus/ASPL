@@ -10,14 +10,14 @@ use App\Http\Controllers\TestController;
 use Carbon\Carbon;
 use Vormkracht10\Analytics\Facades\Analytics;
 use Vormkracht10\Analytics\Period;
-use App\Http\Controllers\QRCodeController; 
+use App\Http\Controllers\QRCodeController;
 
 // Route::get('/', function () {
 //     $startDate = Carbon::now()->subYear();
 //     $endDate = Carbon::now();
-    
+
 //     dd($analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7)));
-    
+
 //     });
     Route::view('qr-code', 'qr-code');
     Route::group(['as'=>'admin.','domain'=>'admin.'.env('APP_URL')],function(){
@@ -36,7 +36,7 @@ use App\Http\Controllers\QRCodeController;
         });
     });
     Route::group(['prefix'=>'auth','as'=>'admin.auth.','domain'=>'admin.'. env('APP_URL')],function(){
-       
+
         Route::get('login',[AdminAuth::class,'login_view'])->name('login-view');
         Route::post('login',[AdminAuth::class,'login'])->name('login');
     });
@@ -55,6 +55,15 @@ use App\Http\Controllers\QRCodeController;
         Route::get('login',[CompanyAuth::class,'login_view'])->name('login-view');
         Route::post('login',[CompanyAuth::class,'login'])->name('login');
     });
+
+    if ( env('APP_URL') == 'http://localhost:8000') {
+        Route::get('/',function(){return redirect()->route('company.auth.login');});
+
+        Route::group(['prefix'=>'auth','as'=>'company.auth.'],function(){
+            Route::get('login',[CompanyAuth::class,'login_view'])->name('login');
+            Route::post('login',[CompanyAuth::class,'login'])->name('login');
+        });
+    }
     Route::group(['prefix'=>'general','as'=>'general.'],function(){
         Route::post('get-state',[GeneralController::class,'get_state_by_country'])->name('get-state');
         Route::post('get-city',[GeneralController::class,'get_state_by_city'])->name('get-city');

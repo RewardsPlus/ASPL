@@ -41,7 +41,7 @@ Route::group(['prefix' => 'role-permission', 'as' => 'role-permission.'], functi
 });
 
 
-// sales Employee 
+// sales Employee
 Route::get('fetch-sales-employee',[EmployeeController::class,'fetch_sales_employee'])->name('fetch-sales-employee');
 Route::get('fetch-old-employees',[EmployeeController::class,'fetch_old_employees'])->name('company.fetch-old-emp');
 Route::get('employee-login-status/{eid}/{status}',[EmployeeController::class,'employee_login_status'])->name('employee.login-status');
@@ -49,6 +49,8 @@ Route::get('employee-login-status/{eid}/{status}',[EmployeeController::class,'em
 // Pincode Delivery
 Route::group(['prefix'=>'delivery','as'=>'delivery.'],function(){
     Route::get('pincode',[PincodeController::class,'view_pincode'])->name('pincode');
+    Route::get('pincode/new',[PincodeController::class,'new_pincode'])->name('pincode-new');
+    Route::post('pincode/save-new-pincode',[PincodeController::class,'save_new_pincode'])->name('save-pincode-new');
     Route::post('update-delivery',[PincodeController::class,'update_delivery'])->name('update-delivery');
     Route::post('update-delivery',[PincodeController::class,'update_delivery'])->name('update-delivery');
     Route::get('delete-delivery/{id}',[PincodeController::class,'delete_delivery'])->name('del-delivery');
