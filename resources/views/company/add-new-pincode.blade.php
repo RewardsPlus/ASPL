@@ -39,9 +39,9 @@
                         <div class="form-group col-md-12">
                             <label for="store">Select Store</label>
                             <select name="store_id" id="store" class="form-select w-50">
-                                <option value="" selected hidden>--Select disabled--</option>
+                                <option value="" selected hidden>--Select--</option>
                                 @foreach ($stores as $store)
-                                    <option value="{{ $store->id }}">{{ $store->name }}</option>
+                                    <option value="{{ $store->id }}" {{ ( count($stores) == 1) ? 'selected' : '' }}>{{ $store->name }} ( {{$store->detail->code}} )</option>
                                 @endforeach
                             </select>
                             @error('store')
@@ -52,7 +52,7 @@
                             <label for="pincode">
                                 Pincode:
                             </label>
-                            <input type="text" name="pincode" id="pincode" placeholder="pincode"
+                            <input type="text" name="pincode" id="pincode" placeholder="Enter Pincode"
                                 class="form-control" required>
                             @error('pincode')
                                 <span class="error">{{ $message }}</span>
@@ -62,7 +62,7 @@
                             <label for="min_day">
                                 Min. Days:
                             </label>
-                            <input type="number" name="min_days" id="min_day" placeholder="min_day"
+                            <input type="number" name="min_days" id="min_day" placeholder="Mimimum days"
                                 class="form-control" required>
                             @error('min_day')
                                 <span class="error">{{ $message }}</span>
@@ -72,7 +72,7 @@
                             <label for="max_days">
                                 Max. Days:
                             </label>
-                            <input type="number" name="max_days" id="max_days" placeholder="max_days"
+                            <input type="number" name="max_days" id="max_days" placeholder="Maximum days"
                                 class="form-control" required>
                             @error('max_days')
                                 <span class="error">{{ $message }}</span>
@@ -82,7 +82,7 @@
                             <label for="pickup_time">
                                 Pickup Time:
                             </label>
-                            <input type="time" name="pickup_time" id="pickup_time" placeholder="pickup_time"
+                            <input type="time" name="pickup_time" id="pickup_time" placeholder="Courier pickup time"
                                 class="form-control" required>
                             @error('pickup_time')
                                 <span class="error">{{ $message }}</span>
@@ -90,6 +90,49 @@
                         </div>
                         <div class="form-group col-md-12">
                             <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </form>
+           </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-12">
+                    <h6>CSV Bulk Upload</h6>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+           <div class="container-fluid">
+                <form action="/delivery/pincode/csv-upload" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="store">Select Store</label>
+                            <select name="store_id" id="store" class="form-select">
+                                <option value="" selected hidden>--Select--</option>
+                                @foreach ($stores as $store)
+                                    <option value="{{ $store->id }}" {{ ( count($stores) == 1) ? 'selected' : '' }}>{{ $store->name }} ( {{$store->detail->code}} )</option>
+                                @endforeach
+                            </select>
+                            @error('store')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="csv">
+                                CSV file:
+                            </label>
+                            <input type="file" name="csv" id="csv" placeholder="CSV file"
+                                class="form-control" required>
+                            @error('csv')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div class="form-group col-md-12">
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </form>

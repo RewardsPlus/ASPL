@@ -71,7 +71,7 @@ class PincodeController extends Controller
     }
 
     public function new_pincode() {
-        $stores = Store::where('company_id',Auth::guard(Helper::getGuard())->user()->id)->get();
+        $stores = Store::where('company_id',Auth::guard(Helper::getGuard())->user()->id)->with('detail')->get();
         return view('company.add-new-pincode', compact('stores'));
     }
 
@@ -84,7 +84,38 @@ class PincodeController extends Controller
             'pickup_time' => 'required|date_format:H:i',
 
         ]);
+        $chk = Pincode::where('store_id', $data['store_id'])->where('pincode', $data['pincode'])->first();
+        if($chk) {
+            return redirect()->back()->with('error','Pincode Already Exist for selected store');
+        }
         Pincode::create($data);
+        return redirect('/delivery/pincode')->with(['store_id'=>$data['store_id'],'success'=>'Pincode Added Successfully']);
+    }
+
+    public function csv_upload(Request $request) {
+        $data = $request->validate([
+            'store_id' => 'required|integer',
+            'csv' => 'required|max:10000|mimes:csv'
+
+        ]);
+        $file = fopen($data['csv'], 'r');
+
+        $header = fgetcsv($file);
+        while ($row = fgetcsv($file)) {
+            $item =  array_combine($header, $row);
+            $record =  Pincode::where('store_id', $data['store_id'])->where('pincode',$item['pincode'])->first();
+            if ($record) {
+                $record->min_days = $item['min_days'];
+                $record->max_days = $item['max_days'];
+                $record->pickup_time = $item['pickup_time'];
+                $record->save();
+            }
+            else{
+                $item['store_id'] = $data['store_id'];
+                Pincode::create($item);
+            }
+        }
+        fclose($file);
         return redirect('/delivery/pincode')->with(['store_id'=>$data['store_id'],'success'=>'Pincode Added Successfully']);
     }
 

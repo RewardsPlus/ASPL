@@ -51,6 +51,7 @@ Route::group(['prefix'=>'delivery','as'=>'delivery.'],function(){
     Route::get('pincode',[PincodeController::class,'view_pincode'])->name('pincode');
     Route::get('pincode/new',[PincodeController::class,'new_pincode'])->name('pincode-new');
     Route::post('pincode/save-new-pincode',[PincodeController::class,'save_new_pincode'])->name('save-pincode-new');
+    Route::post('pincode/csv-upload',[PincodeController::class,'csv_upload'])->name('csv-upload');
     Route::post('update-delivery',[PincodeController::class,'update_delivery'])->name('update-delivery');
     Route::post('update-delivery',[PincodeController::class,'update_delivery'])->name('update-delivery');
     Route::get('delete-delivery/{id}',[PincodeController::class,'delete_delivery'])->name('del-delivery');
