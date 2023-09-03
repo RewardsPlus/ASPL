@@ -39,6 +39,10 @@
                   <li><a href="{{ route('qrcodes.index') }}">List</a></li>
                 </ul>
               </li>
+
+              {{-- Blogs --}}
+              <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title active" target="_blank" href="/blog_admin"><i data-feather="airplay"></i><span >Blogs</span></a>
+              </li>
         </ul>
         </div>
         <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
